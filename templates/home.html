@@ -3,6 +3,28 @@
 
 {% block picword %}Basic Webmap with Calgary Open Data{% endblock %}
 
+{% block sidecontent %}
+<h3>Purpose: </h3>
+<br>
+<p>Search for building permits within specified dates. </p>
+<hr>
+
+
+
+<p>Pick between two dates: </p>
+<input type="text" name="daterange" value="Pick a date range" />
+<hr>
+<p>Pick a single date: </p>
+<input type="text" name="single_date" value="03/08/2020" />
+
+
+
+<hr>
+<button type="button" class="btn btn-primary" onclick="clear_markers()">Remove Markers</button>
+<hr>
+
+{% endblock %}
+
 
 
 {% block rightHeader %}
@@ -10,6 +32,7 @@
 <h3>Map</h3>
 
 {% endblock %}
+
 
 
 
