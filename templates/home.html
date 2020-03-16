@@ -1,0 +1,53 @@
+{% extends "template.html" %}
+
+
+{% block picword %}Basic Webmap with Calgary Open Data{% endblock %}
+
+
+
+{% block rightHeader %}
+
+<h3>Map</h3>
+
+{% endblock %}
+
+
+
+{% block imagecontent %}
+
+<style>
+    #mapid { height: 600px; }
+    
+</style>
+
+
+
+
+
+
+
+<div id = "mapid">
+    <div class= "btnbox">
+        <div class="btn-group btn-group-toggle" id = "tyet" data-toggle="buttons">
+            <label class="btn btn-secondary">
+              <input type="radio"onclick="add_layer(layer2)" autocomplete="off"> Show Base Map
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" onclick="add_layer(layer1)" autocomplete="off"> Show Custom Layer
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio"onclick="add_layer(layer3)" autocomplete="off"> Show Roads Only
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio"onclick="add_layer(layer4)" autocomplete="off"> Satellite
+              </label>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/calgary_geojson.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/map.js') }}"></script>
+
+
+
+{% endblock %}
